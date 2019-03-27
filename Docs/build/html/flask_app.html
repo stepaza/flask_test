@@ -1,0 +1,428 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Flask Application Documentation &mdash; IDSC Code of Conduct 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to IDSC Code of Conduct’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IDSC Code of Conduct
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Flask Application Documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-flask_app">The Flask App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-flask_functions">Auxiliary Functions</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IDSC Code of Conduct</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Flask Application Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/flask_app.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="flask-application-documentation">
+<h1>Flask Application Documentation<a class="headerlink" href="#flask-application-documentation" title="Permalink to this headline">¶</a></h1>
+<p>Welcome to the Flask application for members of the IDSC! This project serves as a <cite>template</cite> and follows all rules in the IDSC rulebook. These include all rules on:</p>
+<ul class="simple">
+<li>Python Coding</li>
+<li>Virtual Environment Control</li>
+<li>Code Versioning</li>
+<li>Code Documentation (<cite>this is what you’re reading right now</cite>)</li>
+<li>Sensitive Data Handling</li>
+<li>Testing</li>
+<li>Deployment with Docker</li>
+<li>Security Issues for Exposed Applications</li>
+</ul>
+<p>This is an example Flask App, so it’s written in <cite>Python</cite> and documented with <em>Sphinx</em>. The final application is containerized with <em>Docker</em> and launched with <em>Gunicorn</em>. Not only does this project
+adhere to the IDSC rulebook, but it also addresses important network questions:</p>
+<ul class="simple">
+<li>Once mounted, is the application available from all networks (clinical, public, etc.)?</li>
+<li>If <em>no</em>, can this be achieved in collaboration with IT security (opening ports, firewall issues, etc.)?</li>
+<li>Does this application adhere to the Insel IT security framework?</li>
+</ul>
+<p>A thorough how-to-Sphinx overview is beyond the scope of this project, so have a look at the
+<a class="reference external" href="http://www.sphinx-doc.org/en/master/">official documentation</a>. For those already familiar with reStructuredText, there’s also a <a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">Quickguide on reStructuredText</a>.</p>
+<hr class="docutils" />
+<div class="section" id="module-flask_app">
+<span id="the-flask-app"></span><h2>The Flask App<a class="headerlink" href="#module-flask_app" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the actual Flask application, including the global variable <code class="docutils literal notranslate"><span class="pre">TASKS</span></code> containing all
+tasks added or removed with calls to the API. Upon start, the app contains 2 tasks:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">TASKS</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span>           <span class="mi">1</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span>        <span class="s1">&#39;Buy groceries&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span>  <span class="s1">&#39;Milk, Cheese, Pizza Ätna, Fruit, Tylenol&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;done&#39;</span><span class="p">:</span>         <span class="kc">False</span><span class="p">,</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;id&#39;</span><span class="p">:</span>           <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;title&#39;</span><span class="p">:</span>        <span class="s1">&#39;Find cute French names&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;description&#39;</span><span class="p">:</span>  <span class="s1">&#39;Which is better - Charlotte or Geneviève?&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;done&#39;</span><span class="p">:</span>         <span class="kc">False</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>The application itself is actually simple: a user can alter specific tasks stored in the <code class="docutils literal notranslate"><span class="pre">TASKS</span></code> variable using one
+of the 5 API methods:</p>
+<blockquote>
+<div><ul class="simple">
+<li><code class="docutils literal notranslate"><span class="pre">GET</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">PUT</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">POST</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">DELETE</span></code></li>
+<li><code class="docutils literal notranslate"><span class="pre">PATCH</span></code></li>
+</ul>
+</div></blockquote>
+<p>Each task has 4 attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>continuous integer, serves as a unique identifier for tasks.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">title</span></code></td>
+<td>task title.</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">description</span></code></td>
+<td>more detailed description of each task.</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">done</span></code></td>
+<td>boolean, one of <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Authentication is done using Flask’s built-in <code class="docutils literal notranslate"><span class="pre">HTTPBasicAuth()</span></code>.</p>
+<p>In addition to the <code class="docutils literal notranslate"><span class="pre">TASKS</span></code> variable, all tasks are written to file, where that file is named <code class="docutils literal notranslate"><span class="pre">&lt;task_id&gt;.txt</span></code>. The
+path to that file is extracted from an environment variable called <code class="docutils literal notranslate"><span class="pre">TASK_PATH</span></code>.</p>
+<dl class="docutils">
+<dt>Example</dt>
+<dd>Assuming that <code class="docutils literal notranslate"><span class="pre">TASK_PATH</span></code> is set to <code class="docutils literal notranslate"><span class="pre">D:/SomeFolder/FlaskTasks</span></code>, the contents of a newly created task (e.g.
+via the POST method) with some <code class="docutils literal notranslate"><span class="pre">id</span></code> &lt;task_id&gt; will be written to the file
+<code class="docutils literal notranslate"><span class="pre">D:/SomeFolder/FlaskTasks/&lt;task_id&gt;.txt</span></code>. Similarly, if the DELETE method is invoked, the corresponding
+<code class="docutils literal notranslate"><span class="pre">&lt;task_id&gt;.txt</span></code> file will be deleted.</dd>
+</dl>
+<p>Deployment of applications in IDSC projects is largely based on Docker containerization. Since environmental variables
+are an excellent choice for controlling docker, apps should be built accordingly.</p>
+<hr class="docutils" />
+<dl class="function">
+<dt id="flask_app.create_task">
+<code class="descclassname">flask_app.</code><code class="descname">create_task</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.create_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to create a new task using the POST method.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">tuple of (<em>JSON representation of the task created</em>, <em>201</em>) if task is created successfully, HTML code 400
+otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.delete_task">
+<code class="descclassname">flask_app.</code><code class="descname">delete_task</code><span class="sig-paren">(</span><em>task_id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.delete_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Deletes a specific task.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>task_id</strong> (<em>int</em>) – ID of task to be deleted.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON representation of <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">deleted</span> <span class="pre">task</span> <span class="pre">[task_id]</span></code>, HTML Code 400 otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.get_password">
+<code class="descclassname">flask_app.</code><code class="descname">get_password</code><span class="sig-paren">(</span><em>username</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.get_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>Obtains a password for <em>username</em> in case the user exists.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>username</strong> (<em>str</em>) – username passed to this function in the context of authenticating with the app.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">user’s password if the user is explicitly specified in this function, None otherwise.</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str or None</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.get_task">
+<code class="descclassname">flask_app.</code><code class="descname">get_task</code><span class="sig-paren">(</span><em>task_id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.get_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method for retrieving the task with <em>task_id</em>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>task_id</strong> (<em>int</em>) – task id passed in the <code class="docutils literal notranslate"><span class="pre">/todo/api/v1.0/tasks/&lt;int:task_id&gt;</span></code> url</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON representation of the task with <em>task_id</em>, Error 404 otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.not_found">
+<code class="descclassname">flask_app.</code><code class="descname">not_found</code><span class="sig-paren">(</span><em>error</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.not_found" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function for formatting error messages in JSON.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>error</strong> (<em>str</em>) – Unused variable</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON representation of <code class="docutils literal notranslate"><span class="pre">Not</span> <span class="pre">found</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.unauthorized">
+<code class="descclassname">flask_app.</code><code class="descname">unauthorized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.unauthorized" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a JSON-formatted <code class="docutils literal notranslate"><span class="pre">Unauthorized</span> <span class="pre">Access</span></code> message.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">JSON representation of the error <code class="docutils literal notranslate"><span class="pre">Unauthorized</span> <span class="pre">Access</span></code></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="flask_app.update_task">
+<code class="descclassname">flask_app.</code><code class="descname">update_task</code><span class="sig-paren">(</span><em>task_id</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_app.update_task" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to update a task in the database.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>task_id</strong> (<em>int</em>) – ID of task to update.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON representation of <code class="docutils literal notranslate"><span class="pre">Successfully</span> <span class="pre">updated</span> <span class="pre">task</span> <span class="pre">[task_id]</span></code>, corresponding HTML error code otherwise.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-flask_functions">
+<span id="auxiliary-functions"></span><h2>Auxiliary Functions<a class="headerlink" href="#module-flask_functions" title="Permalink to this headline">¶</a></h2>
+<p>This module contains auxiliary functions for the application, including wrappers for various Flask functions.</p>
+<hr class="docutils" />
+<dl class="function">
+<dt id="flask_functions.convert_json">
+<code class="descclassname">flask_functions.</code><code class="descname">convert_json</code><span class="sig-paren">(</span><em>arg_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#flask_functions.convert_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrapper for Flask’s <code class="docutils literal notranslate"><span class="pre">jsonify()</span></code> function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>arg_dict</strong> (<em>dict</em>) – dictionary of key-value pairs to be converted into JSON-format.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">JSON-formatted <em>arg_dict</em> using Flask’s <code class="docutils literal notranslate"><span class="pre">jsonify()</span></code> function.</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to IDSC Code of Conduct’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, SZ
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
